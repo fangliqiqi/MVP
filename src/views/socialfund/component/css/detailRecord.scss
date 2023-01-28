@@ -1,0 +1,15 @@
+
+.operate-log-container {
+	::v-deep(.arch-pro-content-container) {
+		margin: 0 !important;
+		padding: 0 !important;
+		//overflow: auto !important;
+		//min-height: 100px !important;
+		//max-height: calc(((100vh - 98px) - 68px) - 24px)!important;
+	}
+
+	.diff-content {
+		line-height: 1.5;
+		font-size: 14px;
+	}
+}

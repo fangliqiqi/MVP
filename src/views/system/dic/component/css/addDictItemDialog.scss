@@ -1,0 +1,16 @@
+.system-add-dict-item-list-container {
+	.arch-pro-layout {
+		max-height: calc(100vh - 168px - 110px - 72px);
+		background: #fff;
+
+		& > div.arch-pro-content-container {
+			margin: 0;
+			max-height: calc(100vh - 168px - 110px - 92px);
+			min-height: 100px !important;
+			
+			.empty-container {
+				height: 220px !important;
+			}
+		}
+	}
+}

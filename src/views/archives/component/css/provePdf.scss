@@ -1,0 +1,100 @@
+::v-deep(.el-dialog){
+  margin-top:60px !important;
+}
+.prove{
+  width: 100%;
+  min-height:650px;
+  font-size: 18.7px;
+  font-family: '宋体','STSong','SimSun','NSimSun';
+  color:#000000;
+  padding: 20px 40px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .prove_title{
+    text-align: center;
+    margin-bottom:50px;
+    letter-spacing: 1em;
+    font-size: 29.3px;
+    font-weight: bold;
+    font-family: '宋体','STSong','SimSun','NSimSun';
+  }
+  .prove_intro{
+    display: inline-block;
+    //padding:0 15px;
+    // border-bottom: 1px solid #000;
+    span{
+      text-decoration: underline;
+    }
+    
+  }
+  .prove_intro_else{
+    span{
+      display: inline-block;
+      width: 250px;
+      border-bottom: 1px solid #000;
+    }
+  }
+  .prove_content{
+    text-indent: 2em;
+    line-height:40px;
+    span{
+      padding:0 4px;
+      text-decoration: underline;
+      //border-bottom: 1px solid #000;
+    }
+  }
+  .prove_footer{
+    text-align:right;
+    margin-bottom: 20px;
+    p{
+      margin-bottom: 10px;
+    }
+  }
+}
+//解除证明字体特殊要求
+.prove_relieve{
+  font-size: 16px;
+  font-family: '宋体','STSong','SimSun','NSimSun';
+
+}
+.contract{
+  min-height: 600px;
+  padding:10px 0 0 20px!important;
+  display: block;
+  .contract_body{
+    border: 1px solid #000;
+    .prove_body{
+      padding: 1px;
+      .prove_title{
+        letter-spacing: normal;
+      }
+    }
+    .prove_footer{
+      padding: 20px;
+    }
+    table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+      tr{
+        td{
+          border-right: 1px solid #000;
+          border-top:1px solid #000;
+          text-align: center;
+          vertical-align: middle;
+          width:10%;
+        }
+        .no_td{
+          border-right: none;
+        }
+      }
+    }
+  }
+  .contract_foot{
+    margin-top: 20px;
+    text-indent: 2em;
+    line-height: 20px;
+    font-size: 14px;
+  } 
+}

@@ -1,0 +1,64 @@
+
+// .pay-search-list{
+//   .arch-pro-content-container{
+//     margin: 0 !important;
+//     padding: 0 !important;
+//   }
+// }
+::v-deep(.arch-pro-content-container) {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+::v-deep(.arch-pro-seacher-container){
+  padding: 20px 0 !important;
+}
+::v-deep(.table-footer){
+  height: 0 !important;
+}
+.el-pagination {
+  font-weight: 400;
+  float: right;
+
+  .btn-prev,
+  .btn-next,
+  &.is-background .el-pager li {
+    height: 32px;
+    line-height: 32px;
+    width: 40px;
+  }
+
+  .btn-next i:before {
+    color: #707881;
+  }
+
+  &.is-background .el-pager li {
+    color: #707881;
+    font-size: 14px;
+
+    &.active {
+      color: #ffffff;
+      background-color: var(--el-color-primary);
+    }
+  }
+
+  .el-pagination__jump {
+    color: #707881;
+    font-size: 14px;
+  }
+
+  .el-pagination__sizes .el-select .el-input {
+    // width: 82px;
+    width: 100px;
+    height: 32px;
+    background: var(--hor-color-background-gray);
+    border-radius: 2px;
+
+    input {
+      width: 100%;
+      height: 100%;
+      // background: #f7f9fc;
+      color: #fff;
+      color: #707881 !important;
+    }
+  }
+}

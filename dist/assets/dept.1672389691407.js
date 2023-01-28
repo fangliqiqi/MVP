@@ -1,0 +1,1 @@
+import{s as t}from"./index.1672389691407.js";async function e(e){return t({url:"/yifu-upms/method/dept/tree",method:"GET",params:e})}async function s(){return t({url:"/yifu-upms/method/dept/updateDept",method:"post"})}export{e as g,s};

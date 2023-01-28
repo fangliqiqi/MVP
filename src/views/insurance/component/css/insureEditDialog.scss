@@ -1,0 +1,33 @@
+.insure-edit-dialog {
+	.el-dialog__body {
+		color: unset;
+
+		.el-form-item.cn_ {
+			.el-form-item__label {
+				padding-right: 5px;
+			}
+		}
+	}
+}
+
+.el-overlay .el-overlay-dialog .insure-edit-dialog.el-dialog .el-dialog__body {
+	padding: 24px 38px 6px 12px !important;
+}
+
+@media screen and (max-width: 1365px) {
+	.insure-edit-dialog {
+		width: 1000px;
+
+		.input {
+			max-width: 170px;
+		}
+
+		.union {
+			.el-form-item__content {
+				.el-form-item {
+					max-width: 170px;
+				}
+			}
+		}
+	}
+}

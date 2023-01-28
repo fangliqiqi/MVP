@@ -1,0 +1,23 @@
+.title{
+  background: var(--hor-color-background-gray);
+  padding: 10px 16px;
+  line-height: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  span {
+    margin-left: 12px;
+  }
+  &::before {
+    display: inline-block;
+    vertical-align: top;
+    content: '';
+    height: 16px;
+    width: 6px;
+    background: var(--el-color-primary);
+  }
+}
+.remark{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

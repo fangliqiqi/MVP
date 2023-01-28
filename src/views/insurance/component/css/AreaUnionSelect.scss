@@ -1,0 +1,21 @@
+.area-union-select {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+
+	.select-item {
+		width: 0;
+		flex: 1;
+		max-width: 242px;
+
+		& + .select-item {
+			margin-left: 20px;
+		}
+
+		::v-deep {
+			.el-form-item__content {
+				width: 100%;
+			}
+		}
+	}
+}

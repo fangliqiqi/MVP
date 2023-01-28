@@ -1,0 +1,6 @@
+projectKey=yifu-app-cloud-hro-mvp
+serverUrl=http://192.168.1.65:19000
+serverVersion=8.5.1.38104
+dashboardUrl=http://192.168.1.65:19000/dashboard?id=yifu-app-cloud-hro-mvp
+ceTaskId=AYTmhex5bw4BgcSYLAa8
+ceTaskUrl=http://192.168.1.65:19000/api/ce/task?id=AYTmhex5bw4BgcSYLAa8

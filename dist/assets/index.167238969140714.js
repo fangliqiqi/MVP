@@ -1,0 +1,1 @@
+import{s as t}from"./index.1672389691407.js";async function e(e){return t({url:"/yifu-archives/method/tsettledomain/page",method:"get",params:e})}async function a(e){return t({url:"/yifu-archives/method/tsettledomain/"+e,method:"get"})}async function n(e){return t({url:"/yifu-archives/method/tsettledomain/noPage",method:"get",params:e})}export{e as a,n as b,a as g};

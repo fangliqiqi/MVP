@@ -1,0 +1,5 @@
+.edit-ele-contract-template-dialog {
+	::v-deep(.el-overlay .el-overlay-dialog .el-dialog .el-dialog__body) {
+		padding: 40px 20px !important;
+	}
+}

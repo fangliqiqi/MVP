@@ -1,0 +1,21 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: yifu-qas-webmvp
+  namespace: qas-mvp
+spec:
+  gateways:
+  - istio-system/qas-worfu
+  hosts:
+  - qas-mvp.yifucenter.com
+  http:
+  - match:
+    - uri:
+        prefix: /
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: yifu-qas-webmvp.qas-mvp.svc.cluster.local
+        port:
+          number: 80

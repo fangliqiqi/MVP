@@ -1,0 +1,47 @@
+.detail-dialog {
+  ::v-deep(.el-dialog__body) {
+      .el-row {
+          width: 100%;
+      }
+  }
+
+  ::v-deep(.el-tabs__item.is-active) {
+      font-weight: 600 !important;
+      border-bottom: 2px solid #fff;
+  }
+
+  // ::v-deep(.el-dialog .el-dialog__footer){
+  //     padding-bottom: 10px;
+  // }
+  .baseinfo {
+      padding: 20px 30px;
+      background: #F7F9FC;
+      border-radius: 4px;
+      border: 1px solid #F7F9FC;
+      font-size: 14px;
+      font-weight: 400;
+      color: #313840;
+      margin-bottom: 20px;
+
+      .rowinfo {
+          margin-bottom: 24px;
+
+      }
+
+      .label {
+          margin-bottom: 8px;
+          font-size: 14px;
+          font-weight: 400;
+          color: #707881;
+      }
+
+      .value {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+  }
+
+
+
+}

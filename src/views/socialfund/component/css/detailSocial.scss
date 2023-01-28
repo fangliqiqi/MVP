@@ -1,0 +1,36 @@
+
+.title {
+	background: var(--hor-color-background-gray);
+	padding: 10px 16px;
+	line-height: 16px;
+	font-weight: 600;
+
+	span {
+		margin-left: 12px;
+	}
+	&::before {
+		display: inline-block;
+		vertical-align: top;
+		content: '';
+		height: 16px;
+		width: 6px;
+		background: var(--el-color-primary);
+	}
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-top: 20px;
+	color: var(--hro-text-color);
+	overflow: hidden;
+	tr {
+		border: 1px solid  var(--el-border-color-light);
+		td {
+			border-right: 1px solid  var(--el-border-color-light);
+			text-align: center;
+			vertical-align: middle;
+			height: 30px;
+		}
+	}
+}

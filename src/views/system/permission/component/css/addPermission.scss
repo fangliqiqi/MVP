@@ -1,0 +1,89 @@
+.arch-pro-layout .el-form-item--default.el-form-item{
+  margin-bottom: 24px;
+}
+.arch-pro-layout {
+  box-sizing: border-box;
+  width: 100%;
+  background: #f5f7fb;
+  height: calc(100vh - 72px);
+  overflow-y: auto;
+}
+.arch-pro-content-container {
+  margin:20px; 
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  height:86%;
+  overflow-y: auto;
+}
+.per-title{
+  width:100%;
+  background: #f5f7fb;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  i{
+    width:6px;
+    height: 18px;
+    display: inline-block;
+    background: #3458AB;
+    border-radius: 2px 2px 2px 2px;
+    margin-right: 10px;
+  }
+}
+.per-form{
+  width: 100%;
+  max-height: 100%;
+  .w650{
+    width: 650px;
+  }
+  .sql{
+    width:800px;
+    display: flex;
+    .sql_title{
+      flex:0 0 120px;
+      text-align: right;
+      padding: 0 12px 0 0;
+    }
+    .sql_body{
+      flex:1;
+      .sql_content{
+        flex:1;
+        display: flex;
+        .sql_left{
+          background: #F5F7FB;
+          padding: 16px;
+          box-sizing: border-box;
+          margin-right: 12px;
+          border-radius: 8px;
+        }
+        .sql_line{
+          width:100%;
+          height: 1px;
+          background: #DCDFE6;
+          margin: 20px 0;
+        }
+        .sql_right{
+          margin-top: 25px;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+.footer{
+  width: 100%;
+  height: 64px;
+  background: #fff;
+  position: absolute;
+  bottom: 0px;
+  padding-right: 48px;
+  z-index:2000;
+  box-shadow: 0px -2px 6px 1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

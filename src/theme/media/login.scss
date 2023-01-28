@@ -1,0 +1,63 @@
+@import './index.scss';
+
+/* 页面宽度小于1200px
+------------------------------- */
+@media screen and (max-width: $lg) {
+	
+}
+
+/* 页面宽度小于992px
+------------------------------- */
+@media screen and (max-width: $md) {
+	// .login-container {
+	// 	.logo_img {
+	// 	}
+	// 	.login-content {
+	// 		width: 60% !important;
+	// 		height: 70% !important;
+	// 		padding: 20px 0 !important;
+	// 		border-radius: 0 !important;
+	// 		box-shadow: 0px 5px 30px 0px rgba(202,216,254,0.19);
+	// 		border: none !important;
+	// 		transition: all 0.3s ease;
+	// 	}
+	// 	.el-form-item {
+	// 		display: flex !important;
+	// 	}
+	// }
+}
+
+/* 页面宽度小于576px
+------------------------------- */
+@media screen and (max-width: $xs) {
+	// .login-container {
+	// 	.logo_img {
+	// 		display: none;
+	// 	}
+	// 	.login-content {
+	// 		width: 60% !important;
+	// 		height: 70% !important;
+	// 		padding: 20px 0 !important;
+	// 		border-radius: 0 !important;
+	// 		box-shadow: 0px 5px 30px 0px rgba(202,216,254,0.19);
+	// 		border: none !important;
+	// 		transition: all 0.3s ease;
+	// 	}
+	// }
+}
+
+/* 页面宽度小于375px
+------------------------------- */
+@media screen and (max-width: $us) {
+	// .login-container {
+	// 	.login-content {
+	// 		width: 100% !important;
+	// 		height: 100%!important;
+	// 		padding: 20px 0 !important;
+	// 		border-radius: 0 !important;
+	// 		box-shadow: 0px 5px 30px 0px rgba(202,216,254,0.19);
+	// 		border: none !important;
+	// 		transition: all 0.3s ease;
+	// 	}
+	// }
+}

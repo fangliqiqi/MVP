@@ -1,0 +1,37 @@
+
+.archives-add-electronic-container {
+	.mb20 {
+		margin-bottom: 0px !important;
+	}
+
+	::v-deep() {
+		.el-checkbox-group {
+			.el-checkbox {
+				padding: 0 12px;
+				border: 1px dotted var(--el-border-color-light);
+				margin-right: 15px;
+				margin-bottom: 15px;
+
+				&:hover {
+					border-color: var(--el-color-primary);
+				}
+			}
+		}
+	}
+}
+.radio_group{
+	margin-left: 20px;
+	.radio_item{
+		::v-deep(.el-radio__label){
+			display: flex !important;
+			align-items: center !important;
+			.el-icon{
+				margin-left: 5px;
+			}
+		}
+	}
+}
+.export-footer{
+	display: flex;
+	justify-content: space-between;
+}

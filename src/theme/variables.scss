@@ -1,0 +1,26 @@
+// 自定义scss变量
+
+:root {
+	// --el-color-primary: #3458ab !important; // 主题色
+	--el-font-size-base: 14px; // 基础字体大小
+	--hro-sidebar-width: 200px; // sidebar宽度
+	--hro-color-text-disabeld: #aeb6c0; // disabled状态
+	--hro-color-white: #fff;
+	--hor-color-background-gray: #F7F9FC; // 常用灰色系背景色
+	--hro-text-gray-color:#707881; // 灰色字体标题
+	--hro-text-color:#313840; // 普通字体颜色
+	--hro-color-menu-secondary-ul: rgba(255, 255, 255, 0.08); // 二级及以下的ul背景色
+
+	--menu-acitve-color: #fff; // 菜单选中
+	--next-bg-main-color: #F5F7FB; // 主背景色
+	--next-bg-color: #f5f5ff;
+	--next-border-color-light: #f1f2f3;
+	--next-color-primary-lighter: #ecf5ff;
+	--next-color-dark-hover: #0000001a;
+	--next-color-menu-hover: var(--el-color-primary);
+	// --next-color-menu-hover: rgba(0, 0, 0, 0.1);
+	--next-color-user-hover: rgba(0, 0, 0, 0.04);
+	--next-color-seting-main: #e9eef3;
+	--next-color-seting-aside: #d3dce6;
+	--next-color-seting-header: #b3c0d1;
+}

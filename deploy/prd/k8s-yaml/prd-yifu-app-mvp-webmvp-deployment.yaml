@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yifu-prd-webmvp
+  namespace: prd-mvp
+spec:
+  selector:
+    matchLabels:
+      app: yifu-prd-webmvp
+  replicas: 1
+  template: # 模版
+    metadata: # 模版
+      labels: # 设定资源的标签
+        app: yifu-prd-webmvp
+      annotations:
+        dapr.io/enabled: "true"                #设定此参数为 true 注入Dapr sidecar到pod
+        dapr.io/app-id: "yifu-prd-webmvp"            #应用程序唯一 ID。 用于服务发现、状态封装 和 发布/订阅 消费者ID
+        dapr.io/app-port: "8888"               #这个参数告诉Dapr你的应用程序正在监听哪个端口。
+        #dapr.io/log-level: "debug"             #为 Dapr sidecar设置日志级别。 允许的值是debug，info，warn，error。 默认是 info
+        #dapr.io/log-as-json: "false"           #将此参数设置为true以JSON格式输出日志。 默认值为 false.
+        #dapr.io/config: file   	           #告诉 Dapr 要使用哪个配置 CRD
+        dapr.io/app-protocol: "http"           #告诉 Dapr 你的应用程序正在使用哪种协议。 有效选项是 http and grpc。 Default is http
+        #dapr.io/app-max-concurrency: "20"	   #限制应用程序的并发量。 有效的数值是大于 0
+        #dapr.io/app-ssl: "false"	           #告诉Dapr通过不安全的SSL连接调用应用程序。 同时适用于HTTP和gRPC。 Traffic between your app and the Dapr sidecar is encrypted with a certificate issued by a non-trusted certificate authority, which is considered insecure. 默认值为 false.
+        dapr.io/metrics-port: "9090"           #设置 sidecar 度量服务器的端口。 默认值为 9090
+        #dapr.io/sidecar-cpu-limit: 2	     #Dapr sidecar可以使用的最大CPU数量。  默认情况下未设置
+        #dapr.io/sidecar-memory-limit: "800Mi"	     #Dapr sidecar可以使用的最大内存量。默认情况下未设置 请参阅 https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/ 的有效值。
+        #dapr.io/sidecar-cpu-request: 1	     #Dapr sidecar要求的 CPU 数量
+        #dapr.io/sidecar-memory-request	     #Dapr sidecar 请求的内存数量
+        dapr.io/http-max-request-size: "100"         #增加http和grpc服务器请求正文参数的最大大小，单位为MB，以处理大文件的上传。 默认值为 4 MB
+        dapr.io/http-read-buffer-size: "16"   #Dapr has a default limit of 4KB for the http header read buffer size. When sending http headers that are bigger than the default 4KB, you can increase this value. Otherwise, you may encounter a Too big request header
+        #dapr.io/sidecar-listen-addresses: "0.0.0.0"
+        # 更多dapr配置请参考 https://www.bookstack.cn/read/dapr-1.5-zh/cc77b74e2cc2f4d4.md
+    spec:
+      nodeSelector:
+        node-type: worker
+      containers:
+        - name: yifu-prd-webmvp
+          image: hub.worfu.com/prd-mvp/yifu-prd-webmvp:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8888
+          env:
+            - name: TZ
+              value: Asia/Shanghai
+          resources:
+            requests:
+              memory: "100Mi"
+            limits:
+              memory: "200Mi"
+      imagePullSecrets:
+        - name: login

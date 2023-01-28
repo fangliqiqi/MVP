@@ -1,0 +1,9 @@
+.module-download {
+	a {
+		text-decoration: none;
+		color: var(--el-button-text-color);
+	}
+}
+::v-deep(.el-input-number .el-input__inner) {
+	text-align: left !important;
+}

@@ -1,0 +1,19 @@
+.tooltip{
+	max-width: calc((100vw - 200px)/2);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block
+}
+ .tooltip_24{
+	max-width:800px;
+}
+.tooltip_6{
+	max-width:300px;
+}
+	
+.check_right .el-timeline-item__node--large{
+	width: 22px !important;
+	height: 22px !important;
+	left: -6px;
+}

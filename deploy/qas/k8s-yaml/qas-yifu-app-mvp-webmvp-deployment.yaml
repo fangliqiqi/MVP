@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yifu-qas-webmvp
+  namespace: qas-mvp
+spec:
+  selector:
+    matchLabels:
+      app: yifu-qas-webmvp
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: yifu-qas-webmvp
+    spec:
+      nodeSelector:
+        node-type: worker
+        kubernetes.io/hostname: yfmaster1
+      containers:
+        - name: yifu-qas-webmvp
+          image: hub.worfu.com/qas-mvp/yifu-qas-webmvp:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8888
+          env:
+            - name: TZ
+              value: Asia/Shanghai
+          resources:
+            requests:
+              memory: "100Mi"
+            limits:
+              memory: "200Mi"
+      imagePullSecrets:
+        - name: login

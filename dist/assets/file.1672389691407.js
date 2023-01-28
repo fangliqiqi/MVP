@@ -1,0 +1,1 @@
+import{s as e}from"./index.1672389691407.js";async function o(o){return e({url:"/yifu-archives/method/fileUpload/ossUploadFile",method:"POST",data:o})}async function s(o){return e({url:"/yifu-archives/method/fileUpload/ossFileUrl/"+o,method:"get"})}async function i(o){return e({url:"/yifu-archives/method/fileUpload/ossFileDelete/"+o,method:"DELETE"})}export{i as d,s as g,o as u};

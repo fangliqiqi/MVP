@@ -1,0 +1,143 @@
+
+.edit-staff-page {
+	position: relative;
+	box-sizing: border-box;
+	height: calc(100vh - 64px - 34px);
+
+	.title {
+		background: var(--hor-color-background-gray);
+		padding: 10px 16px;
+		line-height: 16px;
+		font-weight: 600;
+
+		span {
+			margin-left: 12px;
+		}
+		&::before {
+			display: inline-block;
+			vertical-align: top;
+			content: '';
+			height: 16px;
+			width: 6px;
+			background: var(--el-color-primary);
+		}
+	}
+	.content {
+		background: var(--hro-color-white);
+		padding: 20px 24px 40px;
+		margin: 8px 12px;
+		height: calc(100% - 64px - 12px - 12px);
+		overflow-y: auto;
+	}
+	::v-deep(.el-tabs__item.is-active) {
+		font-weight: 600 !important;
+		border-bottom: 2px solid #fff;
+	}
+}
+.check_right {
+	.el-timeline {
+		--el-timeline-node-color: #58bd7d;
+	}
+	.check_content {
+		p {
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+		.remark {
+			max-width: 280px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: inline-block;
+		}
+		.el-form-item {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.demo-tabs {
+	background: #fff;
+	.arch-pro-layout[data-v-27213aef] {
+		background: #fff;
+	}
+
+	.el-pagination {
+		font-weight: 400;
+		float: right;
+
+		.btn-prev,
+		.btn-next,
+		&.is-background .el-pager li {
+			height: 32px;
+			line-height: 32px;
+			width: 40px;
+		}
+
+		.btn-next i:before {
+			color: #707881;
+		}
+
+		&.is-background .el-pager li {
+			color: #707881;
+			font-size: 14px;
+
+			&.active {
+				color: #ffffff;
+				background-color: var(--el-color-primary);
+			}
+		}
+
+		.el-pagination__jump {
+			color: #707881;
+			font-size: 14px;
+		}
+
+		.el-pagination__sizes .el-select .el-input {
+			// width: 82px;
+			width: 100px;
+			height: 32px;
+			background: var(--hor-color-background-gray);
+			border-radius: 2px;
+
+			input {
+				width: 100%;
+				height: 100%;
+				// background: #f7f9fc;
+				color: #fff;
+				color: #707881 !important;
+			}
+		}
+	}
+}
+
+:v-deep(.el-pagination__total) {
+	margin-top: 2px;
+}
+.operation-container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 68px;
+	background: var(--hro-color-white);
+	text-align: right;
+	padding: 12px 48px;
+
+	::v-deep(.el-button) {
+		min-width: 64px !important;
+		height: 40px !important;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+		line-height: 40px;
+	}
+}
+
+
+::v-deep(.el-table){
+	.first-row{
+		background-color: #fdf6ec
+	}
+  
+}

@@ -1,0 +1,148 @@
+<template>
+	<div class="service-info section-container">
+		<div class="title">
+			<span>整体服务概览</span>
+		</div>
+
+		<!--部分字典信息-->
+		<el-row>
+			<el-col v-for="item in state.params" :key="`basicInfo_${item}`" class="basic-info-item" :span="getColNumber(item)">
+				<span class="desc-title" v-html="getStaffTitle(item)"> </span>
+				<div class="desc-content">
+					<el-tooltip placement="top-start" effect="dark" popper-class="detail-tooltip-popper">
+						<template #content>
+							<div class="detail-tooltip-container">
+								<span v-html="getStaffValue(item)"> </span>
+							</div>
+						</template>
+						<span>{{ getStaffValue(item) }} </span>
+					</el-tooltip>
+				</div>
+			</el-col>
+		</el-row>
+
+		<!--项目列表信息-->
+		<template v-if="showProject">
+			<el-tabs
+				v-model="state.attachActiveTab"
+				:class="`project-tabs ${currentIsReduce ? 'reduce-tabs' : ''}`"
+				style="margin-top: 16px; margin-left:30px"
+				@tab-click="(val) => handleTabClick(val, state.attachActiveTab)"
+			>
+				<el-tab-pane v-for="item in props.projects" :key="`project_tab_${item.id}`" :name="item.id">
+					<template #label>
+						<div :class="`pro-custom-tab ${item.projectStatus == 1 ? 'is-reduce' : ''}`">
+							<span>
+								{{ item.deptName }}
+							</span>
+						</div>
+					</template>
+					<!--项目详情-->
+					<staff-project :info="item" :social="state.socialDetail" :fund="state.fundDetail"></staff-project>
+				</el-tab-pane>
+			</el-tabs>
+		</template>
+	</div>
+</template>
+
+<script setup name="serviceSection">
+import ProTable from '/@/components/ProTable/ProTable.vue';
+import staffProject from './staffProject.vue';
+import { socialDetail, fundDetail } from '/@/api/socialfund/socialfundSearch';
+import { ElMessage } from 'element-plus';
+//  字典设置的已减项为3,若修改需要同步修改
+
+const props = defineProps({
+	getStaffTitle: Function,
+	getStaffValue: Function,
+	getColNumber: Function,
+	projects: Array,
+});
+
+const currentIsReduce = computed(() => {
+	if (props.projects && props.projects.length) {
+		const target = props.projects.find((item) => item.id === state.attachActiveTab);
+		if (target && target.projectStatus == 1) {
+			return true;
+		}
+	}
+	return false;
+});
+
+const handleTabClick = (tab, val) => {
+	const paneName = tab.paneName;
+	const idCard = props.projects.find((item) => item.id === paneName).empIdcard;
+	const deptId = props.projects.find((item) => item.id === paneName).deptId;
+	// console.log(tab.paneName);
+	// console.log(val);
+	getSocailFundDetail(idCard, deptId);
+};
+// 获取社保、公积金详情
+const getSocailFundDetail = async (idCard, deptId) => {
+	if (!idCard || !deptId) {
+		state.socialDetail = null;
+		state.fundDetail = null;
+		return;
+	}
+	try {
+		const social = await socialDetail({ idCard: idCard, deptId: deptId });
+		if (social && social.code == 200) {
+			state.socialDetail = social.data;
+		} else {
+			state.socialDetail = null;
+			ElMessage.error(social.msg || '获取社保详情失败');
+		}
+		const fund = await fundDetail({ idCard: idCard, deptId: deptId });
+		if (fund && fund.code == 200) {
+			state.fundDetail = fund.data;
+		} else {
+			state.fundDetail = null;
+			ElMessage.error(fund.msg || '获取公积金详情失败');
+		}
+	} catch (error) {
+		console.log(error);
+		ElMessage.error('获取社保/公积金详情失败');
+	}
+};
+
+onMounted(() => {
+	if (props.projects && props.projects.length) {
+		state.attachActiveTab = props.projects[0].id;
+		// console.log(props.projects[0]);
+		const idCard = props.projects[0].empIdcard;
+		const deptId = props.projects[0].deptId;
+		getSocailFundDetail(idCard, deptId);
+	}
+});
+
+watch(
+	() => props.projects,
+	(newVal, oldVal) => {
+		if (newVal && newVal.length) {
+			state.attachActiveTab = props.projects[0].id;
+			const idCard = props.projects[0].empIdcard;
+			const deptId = props.projects[0].deptId;
+			// console.log(deptId);
+			getSocailFundDetail(idCard, deptId);
+		} else {
+			state.attachActiveTab = null;
+		}
+	}
+);
+
+const showProject = computed(() => {
+	if (props.projects && props.projects.length) {
+		return true;
+	}
+	return false;
+});
+
+const state = reactive({
+	params: ['contractStatus', 'socialStatus', 'fundStatus', 'insuranceStatus', 'salaryStatus'],
+	attachActiveTab: null,
+	socialDetail: {},
+	fundDetail: {},
+});
+</script>
+<style lang="scss" scoped src="./css/serviceSection.scss">
+</style>

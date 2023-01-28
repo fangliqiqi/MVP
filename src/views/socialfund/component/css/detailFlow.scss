@@ -1,0 +1,79 @@
+.sociallist {
+	display: flex;
+	align-items: center;
+	span {
+		width: 70px;
+		height: 30px;
+		border-radius: 2px;
+		line-height: 30px;
+		text-align: center;
+		margin-right: 5px;
+	}
+	.succee {
+		background-color: rgba(88, 189, 125, 0.07);
+		color: #58bd7d;
+	}
+	.fail {
+		background-color: rgba(232, 78, 78, 0.07);
+		color: #e84e4e;
+	}
+	.wait {
+		background-color: rgba(51, 51, 51, 0.07);
+		color: #333;
+	}
+}
+.title {
+	background: var(--hor-color-background-gray);
+	padding: 10px 16px;
+	line-height: 16px;
+	font-weight: 600;
+
+	span {
+		margin-left: 12px;
+	}
+	&::before {
+		display: inline-block;
+		vertical-align: top;
+		content: '';
+		height: 16px;
+		width: 6px;
+		background: var(--el-color-primary);
+	}
+}
+.college-container {
+	float: right;
+	color: var(--hro-text-color);
+	font-weight: normal;
+	font-size: 14px;
+	cursor: pointer;
+	vertical-align: text-top;
+
+	i {
+		display: inline-block;
+		-webkit-transform: rotateZ(0deg);
+		transform: rotateZ(0deg);
+		transition: transform 0.3s;
+
+		&.isCollapse {
+			-webkit-transform: rotateZ(180deg);
+			transform: rotateZ(180deg);
+			transition: transform 0.3s;
+		}
+	}
+}
+
+.check_content {
+	p {
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: 5px;
+	}
+	span {
+		display: block;
+		line-height: 30px;
+		i {
+			font-style: normal;
+			color: #707881;
+		}
+	}
+}

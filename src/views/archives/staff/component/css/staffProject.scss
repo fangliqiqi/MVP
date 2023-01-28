@@ -1,0 +1,61 @@
+.staff-project-container {
+	a {
+		color: var(--el-color-primary);
+		cursor: pointer;
+	}
+	::v-deep(.arch-pro-content-container) {
+		margin: 0 !important;
+		padding: 0 !important;
+		overflow: hidden;
+	}
+
+	.basic-info-item {
+		padding: 13px 0;
+		font-size: 14px;
+		line-height: 18px;
+		color: var(--hro-text-color);
+		font-weight: 400;
+		text-align: left;
+		// border-bottom: 1px solid #eef0f3;
+		display: flex;
+		flex-wrap: nowrap;
+		.desc-title {
+			color: var(--hro-text-gray-color);
+			display: inline-block;
+			user-select: none;
+			width: 120px;
+			margin-left: 20px;
+			text-align: right;
+		}
+
+		.desc-content {
+			display: inline-block;
+			flex: 1;
+			margin-left: 12px;
+			overflow: hidden;
+			word-break: break-all;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+	::v-deep(.el-tabs__item.is-active){
+		border-bottom:2px solid #fff;
+	}
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-top: 20px;
+	tr {
+		border: 1px solid  var(--el-border-color-light);
+		td {
+			border-right: 1px solid var(--el-border-color-light);
+			text-align: center;
+			vertical-align: middle;
+
+			height: 30px;
+		}
+	}
+}

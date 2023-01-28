@@ -1,0 +1,62 @@
+.checkgroup{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .el-checkbox{
+    flex-basis:20%;
+  }
+}
+.draggable{
+  width:100%;
+  min-height:120px;
+  padding:14px 18px;
+  border-radius: 4px;
+  border: 1px solid #E6E8EC;
+  .eltag{
+    padding: 0 12px;
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color:#333;
+    margin-right: 12px;
+    margin-top: 10px;
+    :hover{
+      cursor: pointer;
+    }
+  }
+  .chosen{
+    border-color: var(--el-color-primary);
+  }
+}
+.draggable_bot{
+  margin-top:5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #707881;
+}
+.pre_month{
+  font-size: 16px;
+  color: #333;
+}
+.pre_momeny{
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 70px;
+}
+.pre_text{
+  font-size: 16px;
+  color: #333;
+}
+.pre_detail{
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.pre_list h4{
+  padding-left: 16px;
+  font-weight: bold;
+  font-size: 16px;
+}

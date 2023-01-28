@@ -1,0 +1,212 @@
+
+.el-button {
+	line-height: 14px !important;
+}
+
+.arch-pro-layout {
+	box-sizing: border-box;
+	width: 100%;
+	background: var(--next-bg-main-color);
+	height: calc(100% - 72px);
+	overflow-y: auto;
+
+	& > div {
+		background: #fff;
+		min-height: 72px;
+
+		&.arch-pro-seacher-container {
+			padding: 20px 30px 10px 20px;
+
+			// margin-top: 6px;
+			//label长度在字的长度的基础上加了16，故距左距离只需4px
+			// padding-left: 4px;
+			.arch-search-item {
+				padding: 0;
+
+				&.arch-search-operation {
+					text-align: right;
+
+					& > div {
+						display: inline-block;
+					}
+				}
+			}
+
+			.arch-table-collapse-container {
+				margin-left: 10px;
+				font-weight: 400;
+				color: #3458ab;
+				font-size: 14px;
+				padding-right: 15px;
+				cursor: pointer;
+				user-select: none;
+				position: relative;
+				display: inline-block;
+				height: 32px;
+				vertical-align: top;
+				line-height: 32px;
+				text-align: center;
+
+				.iconfont {
+					display: inline-block;
+					color: #aeb6c0;
+				}
+
+				&.is-opened .icon-ic-arrow-down {
+					-webkit-transform: rotateZ(0deg);
+					transform: rotateZ(0deg);
+					transition: transform 0.5s;
+
+					&.isCollapse {
+						-webkit-transform: rotateZ(180deg);
+						transform: rotateZ(180deg);
+						transition: transform 0.5s;
+					}
+				}
+
+				.collapse-icon {
+					right: 0px;
+					// top: calc(50% - 7px);
+					color: #3772ff;
+					font-weight: 600;
+				}
+			}
+		}
+
+		&.arch-pro-content-container1 {
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+
+		&.arch-pro-content-container {
+			margin: 20px;
+			background: #fff;
+			padding: 20px;
+
+			.options-btn-container {
+				margin-bottom: 15px;
+				display: flex;
+					flex-wrap: wrap;
+				.arch-btn {
+					margin-right: 6px;
+					margin-bottom: 12px;
+					& + .arch-btn {
+						margin-left: 6px;
+					}
+				}
+			}
+
+			.arch-pro-table {
+				width: 100%;
+				background: #ffffff;
+				border-radius: 4px;
+				//border: 1px solid #dfe6ec;
+
+				//解决safiri浏览器兼容问题
+				.el-table__header-wrapper .el-table__header,
+				.el-table__body-wrapper .el-table__body,
+				.el-table__footer-wrapper .el-table__footer {
+					width: 100%;
+					table-layout: fixed !important;
+				}
+			}
+
+			.select-control {
+				background-color: var(--hor-color-background-gray);
+				border: 1px solid rgba(31, 95, 177, 0.3);
+				border-radius: 2px;
+				font-size: 14px;
+				color: #5b626a;
+				box-sizing: border-box;
+				padding: 8px 16px;
+				margin-bottom: 20px;
+
+				.light {
+					color: #1f5fb1;
+					margin: 0 8px;
+
+					& + span {
+						margin-left: 15px;
+					}
+				}
+
+				span.light {
+					cursor: pointer;
+				}
+
+				.light.clear-btn {
+					cursor: pointer;
+					margin-right: 0;
+				}
+			}
+
+			.table-footer {
+				height: 34px;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 15px;
+
+				.arch-table-pagination-container {
+					text-align: right;
+					flex: 1;
+				}
+			}
+		}
+
+		&.search-not-collapse {
+			padding-bottom: 0;
+
+			.has-bottom {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.input-range-box {
+		display: flex;
+	}
+
+	.empty-table-container {
+		margin: 10px;
+		padding-top: 150px;
+
+		.empty-container {
+			margin-top: 0;
+		}
+	}
+
+	.arch-pro-tip-container {
+		display: block;
+		height: 58px;
+		background: #ffffff;
+		margin: 20px;
+	}
+
+	:v-deep(.el-pagination__total) {
+		margin-top: 2px;
+	}
+
+	.isShowTips {
+		width: 88px;
+		height: 32px;
+		line-height: 32px;
+		border-radius: 4px;
+		border: none;
+		color: #3772ff;
+		font-size: 14px;
+		background: none;
+		cursor: pointer;
+	}
+
+	.isShowTips:hover {
+		background: none;
+	}
+
+	.tableChildern {
+		:v-deep tr td {
+			vertical-align: middle;
+		}
+	}
+}

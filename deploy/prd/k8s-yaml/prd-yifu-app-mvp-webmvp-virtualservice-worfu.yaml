@@ -1,0 +1,21 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: yifu-prd-webmvp
+  namespace: prd-mvp
+spec:
+  gateways:
+  - istio-system/prd-worfu
+  hosts:
+  - mvp.worfu.com
+  http:
+  - match:
+    - uri:
+        prefix: /
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: 127.0.0.1
+        port:
+          number: 3500

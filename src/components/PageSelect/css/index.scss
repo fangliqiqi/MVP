@@ -1,0 +1,66 @@
+.page-select-container {
+	.page-select {
+		position: relative;
+		.el-icon-:before {
+			content: '\e628;';
+		}
+	}
+
+	// 下拉框出现时箭头朝上
+	.arrow-up {
+		.el-input__icon {
+			transform: rotateZ(360deg) !important;
+		}
+	}
+}
+
+.page-select-popper {
+	.el-option-hidden {
+		display: none;
+	}
+	.spare-line {
+		background-color: #dcdfe6;
+		height: 1px;
+		width: 100%;
+		margin: 4px 0;
+		display: block;
+	}
+	.el-scrollbar {
+		position: relative;
+		padding-bottom: 25px;
+		.el-select-dropdown__wrap {
+			max-height: 405px !important;
+		}
+	}
+	.el-select-dropdown__item {
+		line-height: 40px;
+	}
+	.el-scrollbar__bar.is-vertical {
+		bottom: 38px;
+	}
+	.pagination-container {
+		// position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		width: 100%;
+		text-align: center;
+		.el-pagination {
+			float: right;
+		}
+
+		.el-pager li {
+			font-weight: normal;
+			color: #5b626a;
+			margin: 0 2px;
+			&:hover {
+				font-weight: bold;
+				color: #1f5fb1;
+			}
+			&.is-active {
+				font-weight: bold;
+				color: #1f5fb1;
+			}
+		}
+	}
+}

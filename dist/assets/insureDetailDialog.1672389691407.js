@@ -1,0 +1,1 @@
+import{d as a,aD as e}from"./vue.1672389691407.js";const s=a({name:"insureDetailDialog"}),n=Object.assign(s,{setup(a,{expose:s}){const n=e();return s({openDialog:async a=>{n.push({name:"insurance-detail",params:{id:a.id}})}}),(a,e)=>null}});export{n as default};

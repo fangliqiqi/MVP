@@ -1,0 +1,40 @@
+.order-detail-page {
+	position: relative;
+	box-sizing: border-box;
+	height: calc(100vh - 64px - 34px);
+	.title {
+		background: var(--hor-color-background-gray);
+		padding: 10px 16px;
+		line-height: 16px;
+		font-weight: 600;
+		span {
+			margin-left: 12px;
+		}
+		&::before {
+			display: inline-block;
+			vertical-align: top;
+			content: '';
+			height: 16px;
+			width: 6px;
+			background: var(--el-color-primary);
+		}
+	}
+	.content {
+		background: var(--hro-color-white);
+		padding: 20px 24px 40px;
+		margin: 8px 12px;
+		min-height: calc(100% - 64px - 12px - 12px);
+		overflow-y: auto;
+	}
+	::v-deep(.el-tabs__item.is-active) {
+		font-weight: 600 !important;
+		border-bottom: 2px solid #fff;
+	}
+}
+
+::v-deep {
+	.arch-pro-content-container {
+		padding: 20px 0 !important;
+		margin: 0 !important;
+	}
+}

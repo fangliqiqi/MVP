@@ -1,0 +1,37 @@
+.batch-import-dialog {
+	::v-deep(.el-dialog__body) {
+		position: relative;
+
+		.tips {
+			position: absolute;
+			top: 0;
+			padding: 8px 30px;
+			background: #fef6e9;
+			right: 0;
+			left: 0;
+			color: #ffa300;
+
+			::v-deep(i) {
+				vertical-align: top;
+			}
+		}
+	}
+
+	::v-deep(.el-upload-dragger) {
+		padding: 5px 35px;
+	}
+
+	.custom-loading-bar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+		opacity: 0.95;
+	}
+}

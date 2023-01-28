@@ -1,0 +1,38 @@
+
+.redocument-dialog {
+	::v-deep(.arch-pro-content-container) {
+		margin: 0 !important;
+		padding: 30px 0 0 !important;
+		overflow: hidden;
+	}
+
+	.info {
+		padding: 13px 0;
+		font-size: 14px;
+		color: var(--hro-text-color);
+		font-weight: 400;
+		text-align: left;
+		// border-bottom: 1px solid #eef0f3;
+		display: flex;
+		flex-wrap: nowrap;
+
+		.info-label {
+			color: var(--hro-text-gray-color);
+			display: inline-block;
+			user-select: none;
+			// width: 66px;
+			// margin-left: 20px;
+			text-align: right;
+		}
+
+		.info-value {
+			display: inline-block;
+			flex: 1;
+			margin-left: 12px;
+			overflow: hidden;
+			word-break: break-all;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+}

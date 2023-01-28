@@ -1,0 +1,20 @@
+.reply {
+	::v-deep {
+		.el-form-item__content {
+			align-items: flex-start;
+		}
+	}
+
+	.text {
+		line-height: 1.5;
+		margin-top: 6px;
+	}
+}
+
+.file {
+	::v-deep {
+		.el-form-item__content {
+			display: block;
+		}
+	}
+}

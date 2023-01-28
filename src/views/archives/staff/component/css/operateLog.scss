@@ -1,0 +1,13 @@
+
+.operate-log-container {
+	::v-deep(.arch-pro-content-container) {
+		margin: 0 !important;
+		padding: 0 !important;
+		overflow: hidden;
+	}
+
+	.diff-content {
+		line-height: 1.5;
+		font-size: 14px;
+	}
+}

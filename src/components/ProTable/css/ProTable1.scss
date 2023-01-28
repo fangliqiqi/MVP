@@ -1,0 +1,300 @@
+.arch-pro-layout {
+	.sortable-ghost,
+	.ondragging-col {
+		opacity: 0;
+	}
+
+	.el-form-item__label {
+		color: #394961;
+		// padding: 0;
+	}
+
+	// 搜索重置按钮样式
+	.arch-search-operation {
+		.el-button,
+		.el-button:focus,
+		.el-button:hover,
+		.el-button:active {
+			height: 32px;
+			line-height: 32px;
+			padding: 0 26px !important;
+			border-radius: 2px;
+
+			.iconfont {
+				font-size: 14px;
+			}
+		}
+	}
+
+	// 表格上方操作按钮样式
+	.options-btn-container {
+		margin-bottom: 15px;
+
+		.arch-btn {
+			margin-right: 12px;
+
+			& + .arch-btn {
+				margin-left: 12px;
+			}
+		}
+
+		.el-button,
+		.el-button:focus,
+		.el-button:hover,
+		.el-button:active {
+			line-height: 32px;
+			padding: 0px 12px !important;
+
+			.iconfont {
+				font-size: 14px;
+			}
+		}
+	}
+
+	// .iconfont.isCollapse {
+	// 	display: inline-block;
+	// 	transform: var(--el-menu-icon-transform-closed);
+	// 	transition: transform var(--el-transition-duration);
+	// }
+
+	.el-table {
+		tr {
+			td {
+				vertical-align: middle;
+
+				&:first-child {
+					.cell {
+						padding: 0px 26px 0px 24px;
+					}
+				}
+			}
+
+			th {
+				&:first-child {
+					.cell {
+						padding: 0px 26px 0px 24px;
+					}
+				}
+			}
+		}
+
+		//解决safiri浏览器兼容问题
+		.el-table__header,
+		.el-table__body,
+		.el-table__footer {
+			width: 100% !important;
+			table-layout: fixed !important;
+		}
+
+		.cell {
+			padding: 0px 10px;
+			line-height: 20px;
+		}
+
+		.arch-pro-table-header-cell {
+			// 表头
+			background: #f5f7fa !important;
+			// border-radius: 3px 3px 0px 0px;
+			font-weight: 400;
+			color: #707881;
+			height: 46px;
+			line-height: 14px;
+			font-size: 14px;
+		}
+
+		tr .arch-pro-table-header-cell {
+			//border-right: none; 
+			border-bottom: none;
+		}
+
+		.arch-pro-table-cell {
+			// 内容区域
+			font-weight: 400;
+			color: #313840;
+			line-height: 16px;
+			padding: 16px 0px 16px;
+		}
+	}
+
+	.el-pagination {
+		font-weight: 400;
+		float: right;
+
+		.btn-prev,
+		.btn-next,
+		&.is-background .el-pager li {
+			height: 32px;
+			line-height: 32px;
+			width: 40px;
+		}
+
+		.btn-next i:before {
+			color: #707881;
+		}
+
+		&.is-background .el-pager li {
+			color: #707881;
+			font-size: 14px;
+
+			&.active {
+				color: #ffffff;
+				background-color: var(--el-color-primary);
+			}
+		}
+
+		.el-pagination__jump {
+			color: #707881;
+			font-size: 14px;
+		}
+
+		.el-pagination__sizes .el-select .el-input {
+			// width: 82px;
+			width: 100px;
+			height: 32px;
+			background: var(--hor-color-background-gray);
+			border-radius: 2px;
+
+			input {
+				width: 100%;
+				height: 100%;
+				// background: #f7f9fc;
+				color: #fff;
+				color: #707881 !important;
+			}
+		}
+	}
+
+	.arch-table-pagination-container {
+		color: #707881 !important;
+
+		.el-pagination__total {
+			font-weight: 400;
+			color: #b1b5c3;
+			font-size: 14px;
+		}
+	}
+
+	//复选框超出可见
+	.el-table-column--selection .cell {
+		overflow: visible;
+	}
+
+	//去掉单元格右边框
+
+	.el-table--border td {
+		// border-right: transparent;   // 暂时先不确认
+
+		&:last-of-type {
+			border-right: none;
+		}
+	}
+
+	.el-table__header th:nth-last-child(2),
+	.el-table__header th:nth-last-child(1) {
+		border-right: none;
+	}
+
+	.el-table__fixed::before,
+	.el-table__fixed-right::before {
+		display: none;
+	}
+
+	/*.el-table--border td,
+	.el-table--border th,
+	.el-table__body-wrapper .el-table--border.is-scrolling-left ~ .el-table__fixed {
+		border-right: none;
+	} 去除这个样式，产品要求*/
+
+	//去掉表格外层边框
+	.el-table--border,
+	.el-table--group {
+		border: none;
+	}
+
+	.el-table--border::after,
+	.el-table--group::after {
+		width: 0;
+	}
+
+	.el-table::before {
+		height: 0;
+	}
+
+	.el-table th.is-leaf,
+	.el-table td {
+		border-bottom: 1px solid #e6e8ec;
+	}
+
+	button,
+	button:hover,
+	button:focus,
+	button:active {
+		padding: 8px 16px;
+	}
+
+	.el-form-item--default.el-form-item {
+		// margin-bottom: 30px;
+		margin-bottom: 24px;
+	}
+
+	.one-line {
+		.el-form-item--default.el-form-item {
+			margin-bottom: 0px;
+		}
+	}
+
+	.el-date-editor {
+		width: 100%;
+
+		& > span.el-input__prefix {
+			display: block;
+			text-align: right;
+		}
+	}
+
+	.el-cascader {
+		width: 100%;
+	}
+
+	.cus-time-label {
+		.el-form-item__label {
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 25%;
+				width: 15px;
+				height: 16px;
+				border-bottom: 1px solid #707881;
+			}
+		}
+	}
+}
+
+.multiple-cascader {
+	.el-cascader-menu:last-child {
+		.el-icon-loading:before {
+			display: none;
+		}
+	}
+}
+
+.essay-cascader {
+	.el-cascader__search-input {
+		margin-left: 14px;
+	}
+}
+
+.tooltip {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	max-width: 100%;
+}
+
+.tooltip_con {
+	max-width: 400px;
+	white-space: pre-wrap;
+}

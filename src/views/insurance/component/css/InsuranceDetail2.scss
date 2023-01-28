@@ -1,0 +1,77 @@
+.insure-info {
+	.el-form-item--default {
+		margin: 0;
+
+		&.cn_ {
+			.el-form-item__label {
+				padding-right: 4px;
+			}
+		}
+
+		.el-form-item__label {
+			padding-right: 12px;
+			line-height: 40px;
+			height: 40px;
+			font-size: 14px;
+			font-weight: 400;
+			color: #707881;
+		}
+		.el-form-item__content {
+			display: inline-block;
+			padding: 0 12px 0 0;
+			line-height: 40px;
+			width: 240px;
+			height: 40px;
+			font-size: 14px;
+			font-weight: 400;
+			color: #313840;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+.insure-process {
+	word-break: break-all;
+	.h4 {
+		font-size: 16px;
+		font-weight: 500;
+		color: #313840;
+		line-height: 1.1;
+		margin-bottom: 10px;
+		padding-top: 5px;
+	}
+
+	.key {
+		font-size: 14px;
+		font-weight: 400;
+		color: #707881;
+		line-height: 14px;
+	}
+
+	.value {
+		font-size: 14px;
+		font-weight: 400;
+		color: #313840;
+		line-height: 14px;
+	}
+
+	.p + .p {
+		margin-top: 2px;
+	}
+
+	.el-timeline-item__tail {
+		border-color: #58bd7d;
+		left: 9px;
+	}
+
+	.el-timeline-item__node--normal {
+		width: 22px;
+		height: 22px;
+	}
+
+	.el-timeline-item__wrapper {
+		padding-left: 32px;
+	}
+}

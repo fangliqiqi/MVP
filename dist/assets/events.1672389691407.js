@@ -1,0 +1,1 @@
+const t="refresh";function r(r,a,e={}){r.mittBus.emit(t,{...e,target:a})}function a(r,a,e,n=(()=>{})){r.mittBus.on(t,(t=>{t.target===a?e(t.params):n&&n(new Error("target参数不匹配"))}))}function e(r){r.mittBus.off(t)}export{a,r as e,e as o};

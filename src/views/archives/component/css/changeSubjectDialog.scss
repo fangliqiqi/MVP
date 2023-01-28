@@ -1,0 +1,28 @@
+
+.downshift-archives-dialog {
+	::v-deep() {
+		.el-dialog {
+			.el-dialog__body {
+				position: relative;
+				padding: 20px 48px !important;
+			}
+		}
+	}
+
+	.tips {
+		font-size: 14px;
+		font-weight: 400;
+		color: #aeb6c0;
+		line-height: 22px;
+		margin-left: 53px;
+	}
+
+	.line {
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		border-bottom: 1px solid #e5eaef;
+		color: #707881;
+		font-size: 14px;
+	}
+}

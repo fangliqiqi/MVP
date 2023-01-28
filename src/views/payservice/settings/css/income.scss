@@ -1,0 +1,68 @@
+.income-container {
+	background: var(--hro-color-white);
+	padding: 20px 24px 40px;
+	margin: 8px 0;
+	height: calc(100% - 12px - 12px);
+	overflow-y: auto;
+
+	::v-deep(.arch-pro-content-container) {
+		margin: 0 !important;
+		padding: 0 !important;
+		overflow: hidden;
+	}
+
+	.basic-info-item {
+		padding: 13px 0;
+		font-size: 14px;
+		line-height: 18px;
+		color: var(--hro-text-color);
+		font-weight: 400;
+		text-align: left;
+		// border-bottom: 1px solid #eef0f3;
+		display: flex;
+		flex-wrap: nowrap;
+		.desc-title {
+			color: var(--hro-text-gray-color);
+			display: inline-block;
+			user-select: none;
+			width: 130px;
+			margin-left: 20px;
+			text-align: right;
+		}
+
+		.desc-content {
+			display: inline-block;
+			flex: 1;
+			margin-left: 12px;
+			overflow: hidden;
+			word-break: break-all;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.section-container {
+		& + .section-container {
+			margin-top: 5px;
+		}
+
+		.title {
+			background: var(--hor-color-background-gray);
+			padding: 10px 16px;
+			line-height: 16px;
+			font-weight: 600;
+
+			span {
+				margin-left: 12px;
+			}
+			&::before {
+				display: inline-block;
+				vertical-align: top;
+				content: '';
+				height: 16px;
+				width: 6px;
+				background: var(--el-color-primary);
+			}
+		}
+	}
+}

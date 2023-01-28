@@ -1,0 +1,20 @@
+
+.downshift-archives-dialog {
+	::v-deep(.el-dialog__body) {
+		position: relative;
+
+		.tips {
+			position: absolute;
+			top: 0;
+			padding: 8px 30px;
+			background: #fef6e9;
+			right: 0;
+			left: 0;
+			color: #ffa300;
+
+			::v-deep(i) {
+				vertical-align: top;
+			}
+		}
+	}
+}

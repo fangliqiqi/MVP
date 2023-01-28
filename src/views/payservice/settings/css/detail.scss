@@ -1,0 +1,121 @@
+.staff-info-page {
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	height: calc(100vh - 64px - 34px);
+
+	::v-deep(.el-tooltip__popper) {
+		max-width: 100px;
+	}
+
+	.section-container {
+		&+.section-container {
+			margin-top: 5px;
+		}
+	}
+
+	.content {
+		background: var(--hro-color-white);
+		padding: 20px 24px 40px;
+		margin: 8px 0;
+		height: calc(100% - 64px - 12px - 12px);
+		overflow-y: auto;
+
+		.title {
+			background: var(--hor-color-background-gray);
+			padding: 10px 16px;
+			line-height: 16px;
+			font-weight: 600;
+
+			span {
+				margin-left: 12px;
+			}
+
+			&::before {
+				display: inline-block;
+				vertical-align: top;
+				content: '';
+				height: 16px;
+				width: 6px;
+				background: var(--el-color-primary);
+			}
+
+			.operate-log {
+				float: right;
+				color: var(--el-color-primary);
+				font-size: 14px;
+				cursor: pointer;
+				vertical-align: top;
+			}
+		}
+
+		.basic-info {
+			margin-top: 8px;
+
+			.basic-info-item {
+				padding: 13px 0;
+				font-size: 14px;
+				line-height: 18px;
+				color: var(--hro-text-color);
+				font-weight: 400;
+				text-align: left;
+				// border-bottom: 1px solid #eef0f3;
+				display: flex;
+				flex-wrap: nowrap;
+
+				.desc-title {
+					color: var(--hro-text-gray-color);
+					display: inline-block;
+					user-select: none;
+					width: 150px;
+					margin-left: 20px;
+					text-align: right;
+				}
+
+				.desc-content {
+					display: inline-block;
+					flex: 1;
+					margin-left: 12px;
+					overflow: hidden;
+					word-break: break-all;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+
+	.operation-container {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 64px;
+		background: var(--hro-color-white);
+		text-align: right;
+		padding: 12px 48px;
+	}
+
+	.snap-btn {
+		position: absolute;
+		top: 200px;
+		right: 0;
+		background: #ffffff;
+		box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
+		border-radius: 2px 0px 0px 2px;
+		border: 1px solid #e6e8ec;
+		color: var(--hro-text-gray-color);
+		font-size: 14px;
+		line-height: 16px;
+		padding: 12px;
+		cursor: pointer;
+		z-index: 100;
+
+		.jump-icon {
+			font-size: 18px;
+			text-align: center;
+			padding-bottom: 5px;
+			border-bottom: 1px solid #e6e8ec;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+
+.empty-container {
+	margin: 50px 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	.empty-image {
+		width: 300px;
+		margin-bottom: 3px;
+	}
+	.empty-title {
+		font-weight: 400;
+		color: #313840;
+		line-height: 22px;
+		font-size: 16px;
+	}
+
+	.empty-tips {
+		font-weight: 400;
+		color: #aeb6c0;
+		line-height: 12px;
+		margin-top: 8px;
+		font-size: 12px;
+	}
+}
